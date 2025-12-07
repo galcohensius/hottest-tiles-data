@@ -139,6 +139,69 @@ if 'APS' in df.columns:
     plt.savefig(output_dir / '04_APS.png', dpi=300, bbox_inches='tight')
     plt.close()
     print("  ✓ Saved: 04_APS.png")
+    
+    # Plot 4b: APS and Pure APS - First 150 Levels
+    if 'Pure APS' in df.columns:
+        early_levels = df.head(150)
+        plt.figure(figsize=(14, 6))
+        levels_150 = range(1, len(early_levels) + 1)
+        
+        # Plot APS
+        plt.plot(levels_150, early_levels['APS'], marker='o', linewidth=2, 
+                markersize=4, label='APS', color='green', alpha=0.8)
+        
+        # Plot Pure APS
+        plt.plot(levels_150, early_levels['Pure APS'], marker='s', linewidth=2, 
+                markersize=4, label='Pure APS', color='blue', alpha=0.8)
+        
+        plt.title('APS vs Pure APS - First 150 Levels', fontsize=16, fontweight='bold')
+        plt.xlabel('Level', fontsize=12)
+        plt.ylabel('Attempts per Success', fontsize=12)
+        plt.legend()
+        plt.grid(True, alpha=0.3)
+        plt.tight_layout()
+        plt.savefig(output_dir / '04b_APS_early_levels.png', dpi=300, bbox_inches='tight')
+        plt.close()
+        print("  ✓ Saved: 04b_APS_early_levels.png")
+        
+        # Plot 4c: APS and Pure APS - First 80 Levels (without spike at level 99)
+        very_early_levels = df.head(80)
+        plt.figure(figsize=(14, 6))
+        levels_80 = range(1, len(very_early_levels) + 1)
+        
+        # Plot APS
+        plt.plot(levels_80, very_early_levels['APS'], marker='o', linewidth=2, 
+                markersize=4, label='APS', color='green', alpha=0.8)
+        
+        # Plot Pure APS
+        plt.plot(levels_80, very_early_levels['Pure APS'], marker='s', linewidth=2, 
+                markersize=4, label='Pure APS', color='blue', alpha=0.8)
+        
+        plt.title('APS vs Pure APS - First 80 Levels', fontsize=16, fontweight='bold')
+        plt.xlabel('Level', fontsize=12)
+        plt.ylabel('Attempts per Success', fontsize=12)
+        plt.legend()
+        plt.grid(True, alpha=0.3)
+        plt.tight_layout()
+        plt.savefig(output_dir / '04c_APS_first_80_levels.png', dpi=300, bbox_inches='tight')
+        plt.close()
+        print("  ✓ Saved: 04c_APS_first_80_levels.png")
+        
+        # Plot 4d: APS Only - First 125 Levels
+        early_levels_125 = df.head(125)
+        plt.figure(figsize=(14, 6))
+        levels_125 = range(1, len(early_levels_125) + 1)
+        plt.plot(levels_125, early_levels_125['APS'], marker='o', linewidth=2, 
+                markersize=4, color='green', alpha=0.8)
+        
+        plt.title('APS - First 125 Levels', fontsize=16, fontweight='bold')
+        plt.xlabel('Level', fontsize=12)
+        plt.ylabel('Attempts per Success (APS)', fontsize=12)
+        plt.grid(True, alpha=0.3)
+        plt.tight_layout()
+        plt.savefig(output_dir / '04d_APS_only_first_125_levels.png', dpi=300, bbox_inches='tight')
+        plt.close()
+        print("  ✓ Saved: 04d_APS_only_first_125_levels.png")
 
 # Plot 5: Correlation Heatmap (select key numeric columns)
 key_cols = ['players', 'Attempts', 'APS', 'Pure APS', 'Avg Win (s)', 
