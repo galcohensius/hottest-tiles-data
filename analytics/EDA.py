@@ -245,9 +245,11 @@ if available_booster_cols:
 time_cols = ['Avg Win (s)', 'Avg Lose (s)']
 available_time_cols = [col for col in time_cols if col in df.columns and df[col].notna().any()]
 if available_time_cols:
+    # Use only first 125 levels
+    df_125 = df.head(125)
     plt.figure(figsize=(14, 6))
     for col in available_time_cols:
-        plt.plot(range(1, len(df) + 1), df[col], marker='o', 
+        plt.plot(range(1, len(df_125) + 1), df_125[col], marker='o', 
                 linewidth=2, markersize=4, label=col, alpha=0.8)
     plt.title('Average Game Time by Level', fontsize=16, fontweight='bold')
     plt.xlabel('Level', fontsize=12)
@@ -260,16 +262,18 @@ if available_time_cols:
     print("  ✓ Saved: 07_avg_game_time.png")
     
     # Plot 7b: Smoothed Rolling Average Game Time
-    window_size = 25
+    window_size = 5
+    # Use only first 125 levels
+    df_125 = df.head(125)
     plt.figure(figsize=(14, 6))
-    levels = range(1, len(df) + 1)
+    levels = range(1, len(df_125) + 1)
     
     for col in available_time_cols:
         # Original data (faded)
-        plt.plot(levels, df[col], marker='o', linewidth=1, markersize=2, 
+        plt.plot(levels, df_125[col], marker='o', linewidth=1, markersize=2, 
                 label=f'{col} (original)', alpha=0.3)
         # Smoothed data (bold)
-        smoothed = df[col].rolling(window=window_size, center=True, min_periods=5).mean()
+        smoothed = df_125[col].rolling(window=window_size, center=True, min_periods=5).mean()
         plt.plot(levels, smoothed, linewidth=3, label=f'{col} (smoothed)', alpha=0.9)
     
     plt.title('Average Game Time by Level (Smoothed Trends)', fontsize=16, fontweight='bold')
@@ -283,17 +287,20 @@ if available_time_cols:
     print("  ✓ Saved: 07b_avg_game_time_smoothed.png")
     
     # Plot 7c: Box Plot by Level Ranges
+    # Use only first 125 levels
+    df_125 = df.head(125)
     # Create level range categories
     def get_level_range(level_idx):
         level_num = level_idx + 1
-        if level_num <= 200:
-            return 'Early (0-200)'
-        elif level_num <= 600:
-            return 'Mid (200-600)'
+        if level_num <= 40:
+            return 'Early (1-40)'
+        elif level_num <= 80:
+            return 'Mid (41-80)'
         else:
-            return 'Late (600-1200)'
+            return 'Late (81-125)'
     
-    df['Level_Range'] = [get_level_range(i) for i in range(len(df))]
+    df_125 = df_125.copy()
+    df_125['Level_Range'] = [get_level_range(i) for i in range(len(df_125))]
     
     fig, axes = plt.subplots(1, 2, figsize=(16, 6))
     
@@ -301,8 +308,8 @@ if available_time_cols:
         ax = axes[idx]
         data_for_box = []
         labels = []
-        for level_range in ['Early (0-200)', 'Mid (200-600)', 'Late (600-1200)']:
-            range_data = df[df['Level_Range'] == level_range][col].dropna()
+        for level_range in ['Early (1-40)', 'Mid (41-80)', 'Late (81-125)']:
+            range_data = df_125[df_125['Level_Range'] == level_range][col].dropna()
             if len(range_data) > 0:
                 data_for_box.append(range_data)
                 labels.append(level_range)
@@ -325,9 +332,12 @@ if available_time_cols:
     
     # Plot 7d: Win-Lose Time Difference
     if 'Avg Win (s)' in available_time_cols and 'Avg Lose (s)' in available_time_cols:
-        win_times = df['Avg Win (s)']
-        lose_times = df['Avg Lose (s)']
+        # Use only first 125 levels
+        df_125 = df.head(125)
+        win_times = df_125['Avg Win (s)']
+        lose_times = df_125['Avg Lose (s)']
         time_diff = lose_times - win_times
+        levels = range(1, len(df_125) + 1)
         
         plt.figure(figsize=(14, 6))
         # Original difference
@@ -351,12 +361,15 @@ if available_time_cols:
         print("  ✓ Saved: 07d_win_lose_difference.png")
     
     # Plot 7e: Percentile/Variability Bands
+    # Use only first 125 levels
+    df_125 = df.head(125)
+    levels = range(1, len(df_125) + 1)
     plt.figure(figsize=(14, 6))
     for col in available_time_cols:
         # Calculate smoothed mean
-        smoothed_mean = df[col].rolling(window=window_size, center=True, min_periods=5).mean()
+        smoothed_mean = df_125[col].rolling(window=window_size, center=True, min_periods=5).mean()
         # Calculate rolling standard deviation as variability proxy
-        smoothed_std = df[col].rolling(window=window_size, center=True, min_periods=5).std()
+        smoothed_std = df_125[col].rolling(window=window_size, center=True, min_periods=5).std()
         
         # Plot bands
         upper_band = smoothed_mean + smoothed_std
@@ -379,7 +392,8 @@ if available_time_cols:
     print("  ✓ Saved: 07e_avg_game_time_percentiles.png")
     
     # Clean up temporary column
-    df.drop('Level_Range', axis=1, inplace=True, errors='ignore')
+    if 'Level_Range' in df_125.columns:
+        df_125.drop('Level_Range', axis=1, inplace=True, errors='ignore')
 
 # Plot 8: Combo Statistics
 combo_cols = ['Avg Combo', 'Avg SuperCombo', 'Avg MegaCombo', 'Avg BigCombo']

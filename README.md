@@ -22,10 +22,7 @@ The analysis generates several visualizations in the `EDA_plots/` and `retention
 ## Requirements
 
 - Python 3.x
-- pandas
-- matplotlib
-- seaborn
-- numpy
+- Install dependencies: `pip install -r requirements.txt`
 
 ## Usage
 
