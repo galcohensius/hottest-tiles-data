@@ -26,9 +26,9 @@ The analysis generates several visualizations in the `EDA_plots/` and `retention
 
 ## Usage
 
+From the repository root:
+
 ```bash
-cd data
 python analytics/EDA.py
 python analytics/retention_EDA.py
 ```
-
