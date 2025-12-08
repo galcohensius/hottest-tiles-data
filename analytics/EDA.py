@@ -8,8 +8,12 @@ from pathlib import Path
 sns.set_style("whitegrid")
 plt.rcParams['figure.figsize'] = (12, 6)
 
+# Resolve paths relative to repository root
+project_root = Path(__file__).resolve().parent.parent
+data_dir = project_root / "data"
+
 # Load the data
-data_path = Path(__file__).parent / "hottestTiles_LevelsFunnel.csv"
+data_path = data_dir / "hottestTiles_LevelsFunnel.csv"
 df = pd.read_csv(data_path)
 
 print("=" * 80)
@@ -81,7 +85,7 @@ if 'Global Churn' in df.columns:
 print("\n7. GENERATING VISUALIZATIONS...")
 print("-" * 80)
 
-# Create output directory for plots
+# Create output directory for plots (now under analytics)
 output_dir = Path(__file__).parent / "EDA_plots"
 output_dir.mkdir(exist_ok=True)
 

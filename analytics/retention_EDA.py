@@ -18,8 +18,12 @@ print("=" * 80)
 print("GAME RETENTION EDA - hottestTiles Levels Funnel")
 print("=" * 80)
 
+# Resolve paths relative to repository root
+project_root = Path(__file__).resolve().parent.parent
+data_dir = project_root / "data"
+
 # Load the data
-data_path = Path(__file__).parent / "hottestTiles_LevelsFunnel.csv"
+data_path = data_dir / "hottestTiles_LevelsFunnel.csv"
 df = pd.read_csv(data_path)
 
 print("\n1. DATA QUALITY & PREPARATION")
@@ -51,7 +55,7 @@ for col in percentage_cols:
 # Extract level number for easier analysis
 df['level_num'] = df['Level'].str.extract(r'(\d+)').astype(int)
 
-# Create output directory
+# Create output directory (now under analytics)
 output_dir = Path(__file__).parent / "retention_plots"
 output_dir.mkdir(exist_ok=True)
 

@@ -1,0 +1,414 @@
+{
+  "Level": {
+    "LevelNumber": 1,
+    "LevelDifficulty": "Normal",
+    "Board": {
+      "Grid": [
+        {
+          "GridPosition": [
+            1,
+            1
+          ],
+          "Stacks": []
+        },
+        {
+          "GridPosition": [
+            1,
+            2
+          ],
+          "Stacks": [
+            {
+              "TilesCount": 5,
+              "Color": "Green",
+              "Fairy": false,
+              "Ice": false,
+              "Grass": false,
+              "Flower": false,
+              "Bunny": false,
+              "Dwarf": false,
+              "Birdhouse": false,
+              "Igloo": 0,
+              "Empty": false
+            }
+          ]
+        },
+        {
+          "GridPosition": [
+            1,
+            3
+          ],
+          "Stacks": [
+            {
+              "TilesCount": 3,
+              "Color": "Green",
+              "Fairy": false,
+              "Ice": false,
+              "Grass": false,
+              "Flower": false,
+              "Bunny": false,
+              "Dwarf": false,
+              "Birdhouse": false,
+              "Igloo": 0,
+              "Empty": false
+            }
+          ]
+        },
+        {
+          "GridPosition": [
+            1,
+            4
+          ],
+          "Stacks": [
+            {
+              "TilesCount": 5,
+              "Color": "Green",
+              "Fairy": false,
+              "Ice": false,
+              "Grass": false,
+              "Flower": false,
+              "Bunny": false,
+              "Dwarf": false,
+              "Birdhouse": false,
+              "Igloo": 0,
+              "Empty": false
+            }
+          ]
+        },
+        {
+          "GridPosition": [
+            1,
+            5
+          ],
+          "Stacks": [
+            {
+              "TilesCount": 4,
+              "Color": "Red",
+              "Fairy": false,
+              "Ice": false,
+              "Grass": false,
+              "Flower": false,
+              "Bunny": false,
+              "Dwarf": false,
+              "Birdhouse": false,
+              "Igloo": 0,
+              "Empty": false
+            }
+          ]
+        },
+        {
+          "GridPosition": [
+            2,
+            1
+          ],
+          "Stacks": []
+        },
+        {
+          "GridPosition": [
+            2,
+            2
+          ],
+          "Stacks": [
+            {
+              "TilesCount": 4,
+              "Color": "Red",
+              "Fairy": false,
+              "Ice": false,
+              "Grass": false,
+              "Flower": false,
+              "Bunny": false,
+              "Dwarf": false,
+              "Birdhouse": false,
+              "Igloo": 0,
+              "Empty": false
+            }
+          ]
+        },
+        {
+          "GridPosition": [
+            2,
+            3
+          ],
+          "Stacks": [
+            {
+              "TilesCount": 5,
+              "Color": "Blue",
+              "Fairy": false,
+              "Ice": false,
+              "Grass": false,
+              "Flower": false,
+              "Bunny": false,
+              "Dwarf": false,
+              "Birdhouse": false,
+              "Igloo": 0,
+              "Empty": false
+            }
+          ]
+        },
+        {
+          "GridPosition": [
+            2,
+            4
+          ],
+          "Stacks": [
+            {
+              "TilesCount": 3,
+              "Color": "Blue",
+              "Fairy": false,
+              "Ice": false,
+              "Grass": false,
+              "Flower": false,
+              "Bunny": false,
+              "Dwarf": false,
+              "Birdhouse": false,
+              "Igloo": 0,
+              "Empty": false
+            }
+          ]
+        },
+        {
+          "GridPosition": [
+            2,
+            5
+          ],
+          "Stacks": [
+            {
+              "TilesCount": 3,
+              "Color": "Red",
+              "Fairy": false,
+              "Ice": false,
+              "Grass": false,
+              "Flower": false,
+              "Bunny": false,
+              "Dwarf": false,
+              "Birdhouse": false,
+              "Igloo": 0,
+              "Empty": false
+            }
+          ]
+        },
+        {
+          "GridPosition": [
+            3,
+            1
+          ],
+          "Stacks": []
+        },
+        {
+          "GridPosition": [
+            3,
+            2
+          ],
+          "Stacks": [
+            {
+              "TilesCount": 5,
+              "Color": "Blue",
+              "Fairy": false,
+              "Ice": false,
+              "Grass": false,
+              "Flower": false,
+              "Bunny": false,
+              "Dwarf": false,
+              "Birdhouse": false,
+              "Igloo": 0,
+              "Empty": false
+            }
+          ]
+        },
+        {
+          "GridPosition": [
+            3,
+            3
+          ],
+          "Stacks": [
+            {
+              "TilesCount": 3,
+              "Color": "Red",
+              "Fairy": false,
+              "Ice": false,
+              "Grass": false,
+              "Flower": false,
+              "Bunny": false,
+              "Dwarf": false,
+              "Birdhouse": false,
+              "Igloo": 0,
+              "Empty": false
+            }
+          ]
+        },
+        {
+          "GridPosition": [
+            3,
+            4
+          ],
+          "Stacks": [
+            {
+              "TilesCount": 5,
+              "Color": "Blue",
+              "Fairy": false,
+              "Ice": false,
+              "Grass": false,
+              "Flower": false,
+              "Bunny": false,
+              "Dwarf": false,
+              "Birdhouse": false,
+              "Igloo": 0,
+              "Empty": false
+            }
+          ]
+        },
+        {
+          "GridPosition": [
+            3,
+            5
+          ],
+          "Stacks": [
+            {
+              "TilesCount": 4,
+              "Color": "Green",
+              "Fairy": false,
+              "Ice": false,
+              "Grass": false,
+              "Flower": false,
+              "Bunny": false,
+              "Dwarf": false,
+              "Birdhouse": false,
+              "Igloo": 0,
+              "Empty": false
+            }
+          ]
+        },
+        {
+          "GridPosition": [
+            4,
+            1
+          ],
+          "Stacks": []
+        },
+        {
+          "GridPosition": [
+            4,
+            2
+          ],
+          "Stacks": [
+            {
+              "TilesCount": 3,
+              "Color": "Red",
+              "Fairy": false,
+              "Ice": false,
+              "Grass": false,
+              "Flower": false,
+              "Bunny": false,
+              "Dwarf": false,
+              "Birdhouse": false,
+              "Igloo": 0,
+              "Empty": false
+            }
+          ]
+        },
+        {
+          "GridPosition": [
+            4,
+            3
+          ],
+          "Stacks": [
+            {
+              "TilesCount": 5,
+              "Color": "Red",
+              "Fairy": false,
+              "Ice": false,
+              "Grass": false,
+              "Flower": false,
+              "Bunny": false,
+              "Dwarf": false,
+              "Birdhouse": false,
+              "Igloo": 0,
+              "Empty": false
+            }
+          ]
+        },
+        {
+          "GridPosition": [
+            4,
+            4
+          ],
+          "Stacks": [
+            {
+              "TilesCount": 4,
+              "Color": "Red",
+              "Fairy": false,
+              "Ice": false,
+              "Grass": false,
+              "Flower": false,
+              "Bunny": false,
+              "Dwarf": false,
+              "Birdhouse": false,
+              "Igloo": 0,
+              "Empty": false
+            }
+          ]
+        },
+        {
+          "GridPosition": [
+            4,
+            5
+          ],
+          "Stacks": [
+            {
+              "TilesCount": 5,
+              "Color": "Green",
+              "Fairy": false,
+              "Ice": false,
+              "Grass": false,
+              "Flower": false,
+              "Bunny": false,
+              "Dwarf": false,
+              "Birdhouse": false,
+              "Igloo": 0,
+              "Empty": false
+            }
+          ]
+        }
+      ],
+      "TilesProbability": [
+        25,
+        25,
+        25,
+        25
+      ],
+      "MultiStack": [
+        0
+      ],
+      "ColorsProbability": [
+        {
+          "ColorName": "Blue",
+          "Chance": 33
+        },
+        {
+          "ColorName": "Green",
+          "Chance": 33
+        },
+        {
+          "ColorName": "Red",
+          "Chance": 33
+        }
+      ],
+      "LevelTarget": [
+        {
+          "ColorName": "Red",
+          "Count": 1
+        },
+        {
+          "ColorName": "Blue",
+          "Count": 1
+        },
+        {
+          "ColorName": "Green",
+          "Count": 1
+        }
+      ],
+      "TotalMoves": 15,
+      "MinFairy": 0,
+      "MinCoin": 0
+    }
+  }
+}

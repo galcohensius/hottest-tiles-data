@@ -31,7 +31,7 @@ The analysis generates several visualizations in the `EDA_plots/` and `retention
 
 ```bash
 cd data
-python EDA.py
-python retention_EDA.py
+python analytics/EDA.py
+python analytics/retention_EDA.py
 ```
 
