@@ -19,16 +19,7 @@
           "Stacks": [
             {
               "TilesCount": 5,
-              "Color": "Orange",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Orange"
             }
           ]
         },
@@ -40,16 +31,7 @@
           "Stacks": [
             {
               "TilesCount": 4,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             }
           ]
         },
@@ -61,29 +43,11 @@
           "Stacks": [
             {
               "TilesCount": 5,
-              "Color": "Pink",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Pink"
             },
             {
               "TilesCount": 3,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             }
           ]
         },
@@ -95,16 +59,7 @@
           "Stacks": [
             {
               "TilesCount": 3,
-              "Color": "Red",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Red"
             }
           ]
         },
@@ -116,16 +71,7 @@
           "Stacks": [
             {
               "TilesCount": 4,
-              "Color": "Red",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Red"
             }
           ]
         },
@@ -137,29 +83,11 @@
           "Stacks": [
             {
               "TilesCount": 3,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             },
             {
               "TilesCount": 3,
-              "Color": "Red",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Red"
             }
           ]
         },
@@ -171,16 +99,7 @@
           "Stacks": [
             {
               "TilesCount": 5,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             }
           ]
         },
@@ -199,29 +118,11 @@
           "Stacks": [
             {
               "TilesCount": 2,
-              "Color": "Orange",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Orange"
             },
             {
               "TilesCount": 3,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             }
           ]
         },
@@ -233,29 +134,11 @@
           "Stacks": [
             {
               "TilesCount": 3,
-              "Color": "Red",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Red"
             },
             {
               "TilesCount": 3,
-              "Color": "Orange",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Orange"
             }
           ]
         },
@@ -267,29 +150,11 @@
           "Stacks": [
             {
               "TilesCount": 3,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             },
             {
               "TilesCount": 4,
-              "Color": "Red",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Red"
             }
           ]
         },
@@ -301,16 +166,7 @@
           "Stacks": [
             {
               "TilesCount": 2,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             }
           ]
         },
@@ -322,29 +178,11 @@
           "Stacks": [
             {
               "TilesCount": 3,
-              "Color": "Orange",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Orange"
             },
             {
               "TilesCount": 3,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             }
           ]
         },
@@ -356,29 +194,11 @@
           "Stacks": [
             {
               "TilesCount": 3,
-              "Color": "Red",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Red"
             },
             {
               "TilesCount": 3,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             }
           ]
         },
@@ -390,16 +210,7 @@
           "Stacks": [
             {
               "TilesCount": 4,
-              "Color": "Red",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Red"
             }
           ]
         },
@@ -425,29 +236,11 @@
           "Stacks": [
             {
               "TilesCount": 2,
-              "Color": "Pink",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Pink"
             },
             {
               "TilesCount": 5,
-              "Color": "Red",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Red"
             }
           ]
         },
@@ -459,16 +252,7 @@
           "Stacks": [
             {
               "TilesCount": 4,
-              "Color": "Orange",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Orange"
             }
           ]
         },
@@ -480,29 +264,11 @@
           "Stacks": [
             {
               "TilesCount": 3,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             },
             {
               "TilesCount": 3,
-              "Color": "Orange",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Orange"
             }
           ]
         },
@@ -514,29 +280,11 @@
           "Stacks": [
             {
               "TilesCount": 4,
-              "Color": "Pink",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Pink"
             },
             {
               "TilesCount": 3,
-              "Color": "Orange",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Orange"
             }
           ]
         },
@@ -548,16 +296,7 @@
           "Stacks": [
             {
               "TilesCount": 4,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             }
           ]
         },
@@ -590,29 +329,11 @@
           "Stacks": [
             {
               "TilesCount": 3,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             },
             {
               "TilesCount": 3,
-              "Color": "Red",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Red"
             }
           ]
         },
@@ -624,29 +345,11 @@
           "Stacks": [
             {
               "TilesCount": 5,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             },
             {
               "TilesCount": 3,
-              "Color": "Pink",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Pink"
             }
           ]
         },
@@ -665,16 +368,7 @@
           "Stacks": [
             {
               "TilesCount": 4,
-              "Color": "Orange",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Orange"
             }
           ]
         },
@@ -686,29 +380,11 @@
           "Stacks": [
             {
               "TilesCount": 3,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             },
             {
               "TilesCount": 3,
-              "Color": "Orange",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Orange"
             }
           ]
         },
@@ -741,16 +417,7 @@
           "Stacks": [
             {
               "TilesCount": 5,
-              "Color": "Orange",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Orange"
             }
           ]
         },
@@ -762,29 +429,11 @@
           "Stacks": [
             {
               "TilesCount": 2,
-              "Color": "Red",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Red"
             },
             {
               "TilesCount": 3,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             }
           ]
         },
@@ -803,29 +452,11 @@
           "Stacks": [
             {
               "TilesCount": 2,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             },
             {
               "TilesCount": 2,
-              "Color": "Pink",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Pink"
             }
           ]
         },
@@ -837,16 +468,7 @@
           "Stacks": [
             {
               "TilesCount": 4,
-              "Color": "Pink",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Pink"
             }
           ]
         },
@@ -879,16 +501,7 @@
           "Stacks": [
             {
               "TilesCount": 3,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             }
           ]
         },
@@ -900,29 +513,11 @@
           "Stacks": [
             {
               "TilesCount": 4,
-              "Color": "Pink",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Pink"
             },
             {
               "TilesCount": 3,
-              "Color": "Orange",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Orange"
             }
           ]
         },
@@ -934,29 +529,11 @@
           "Stacks": [
             {
               "TilesCount": 3,
-              "Color": "Orange",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Orange"
             },
             {
               "TilesCount": 5,
-              "Color": "Pink",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Pink"
             }
           ]
         },
@@ -968,16 +545,7 @@
           "Stacks": [
             {
               "TilesCount": 5,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             }
           ]
         },
@@ -989,29 +557,11 @@
           "Stacks": [
             {
               "TilesCount": 3,
-              "Color": "Red",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Red"
             },
             {
               "TilesCount": 3,
-              "Color": "Pink",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Pink"
             }
           ]
         },
@@ -1037,29 +587,11 @@
           "Stacks": [
             {
               "TilesCount": 2,
-              "Color": "Orange",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Orange"
             },
             {
               "TilesCount": 3,
-              "Color": "Pink",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Pink"
             }
           ]
         },
@@ -1071,16 +603,7 @@
           "Stacks": [
             {
               "TilesCount": 4,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             }
           ]
         },
@@ -1092,29 +615,11 @@
           "Stacks": [
             {
               "TilesCount": 3,
-              "Color": "Red",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Red"
             },
             {
               "TilesCount": 3,
-              "Color": "Orange",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Orange"
             }
           ]
         },
@@ -1126,29 +631,11 @@
           "Stacks": [
             {
               "TilesCount": 3,
-              "Color": "Pink",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Pink"
             },
             {
               "TilesCount": 3,
-              "Color": "Red",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Red"
             }
           ]
         },
@@ -1160,29 +647,11 @@
           "Stacks": [
             {
               "TilesCount": 5,
-              "Color": "Orange",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Orange"
             },
             {
               "TilesCount": 4,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             }
           ]
         },
@@ -1194,16 +663,7 @@
           "Stacks": [
             {
               "TilesCount": 4,
-              "Color": "Orange",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Orange"
             }
           ]
         },
@@ -1215,16 +675,7 @@
           "Stacks": [
             {
               "TilesCount": 3,
-              "Color": "Red",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Red"
             }
           ]
         },
@@ -1243,16 +694,7 @@
           "Stacks": [
             {
               "TilesCount": 4,
-              "Color": "Pink",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Pink"
             }
           ]
         },
@@ -1264,16 +706,7 @@
           "Stacks": [
             {
               "TilesCount": 5,
-              "Color": "Pink",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Pink"
             }
           ]
         },
@@ -1285,29 +718,11 @@
           "Stacks": [
             {
               "TilesCount": 4,
-              "Color": "Orange",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Orange"
             },
             {
               "TilesCount": 3,
-              "Color": "Red",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Red"
             }
           ]
         },
@@ -1319,16 +734,7 @@
           "Stacks": [
             {
               "TilesCount": 5,
-              "Color": "Orange",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Orange"
             }
           ]
         },
@@ -1340,29 +746,11 @@
           "Stacks": [
             {
               "TilesCount": 3,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             },
             {
               "TilesCount": 3,
-              "Color": "Red",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Red"
             }
           ]
         },
@@ -1374,16 +762,7 @@
           "Stacks": [
             {
               "TilesCount": 5,
-              "Color": "Green",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Green"
             }
           ]
         },
@@ -1395,16 +774,7 @@
           "Stacks": [
             {
               "TilesCount": 3,
-              "Color": "Pink",
-              "Fairy": false,
-              "Ice": false,
-              "Grass": false,
-              "Flower": false,
-              "Bunny": false,
-              "Dwarf": false,
-              "Birdhouse": false,
-              "Igloo": 0,
-              "Empty": false
+              "Color": "Pink"
             }
           ]
         }
@@ -1438,7 +808,6 @@
       ],
       "LevelTarget": [],
       "TotalMoves": 5,
-      "MinFairy": 0,
       "MinCoin": 24
     }
   }
