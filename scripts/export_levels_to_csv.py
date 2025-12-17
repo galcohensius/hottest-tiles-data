@@ -29,7 +29,9 @@ def load_levels():
 
         # Probabilities and arrays
         tiles_prob = board.get("TilesProbability", [])
-        multi_stack = board.get("MultiStack", [])
+        multi_stack_list = board.get("MultiStack", [])
+        # MultiStack is an array but we want just the first value as int
+        multi_stack = multi_stack_list[0] if multi_stack_list and len(multi_stack_list) > 0 else None
 
         # Colors probability as map color: prob
         colors_prob_list = board.get("ColorsProbability", []) or []
@@ -107,7 +109,7 @@ def write_csv(levels):
                 "DynamicBombPercents": level["DynamicBombPercents"],
                 "DynamicIcePercents": level["DynamicIcePercents"],
                 "TilesProbability": json.dumps(level["TilesProbability"], separators=(",", ":")),
-                "MultiStack": json.dumps(level["MultiStack"], separators=(",", ":")),
+                "MultiStack": level["MultiStack"],
                 "ColorsProbability": json.dumps(level["ColorsProbability"], separators=(",", ":")),
                 "LevelTarget": json.dumps(level["LevelTarget"], separators=(",", ":")),
                 "Grid": json.dumps(level["Grid"], separators=(",", ":")),

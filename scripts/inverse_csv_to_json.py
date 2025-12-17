@@ -40,7 +40,7 @@ def row_to_level(row):
     board = {
         "Grid": parse_grid(row["Grid"]),
         "TilesProbability": json.loads(row["TilesProbability"]) if row["TilesProbability"] else [],
-        "MultiStack": json.loads(row["MultiStack"]) if row["MultiStack"] else [],
+        "MultiStack": [int(row["MultiStack"])] if row.get("MultiStack") and row["MultiStack"] != "" else [],
         "ColorsProbability": parse_colors_prob(row["ColorsProbability"]),
         "LevelTarget": json.loads(row["LevelTarget"]) if row["LevelTarget"] else [],
         "TotalMoves": int(row["total_moves"]) if row["total_moves"] else None,

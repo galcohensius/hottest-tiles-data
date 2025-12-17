@@ -51,6 +51,16 @@ def process_level(path: Path) -> bool:
             cleaned_grid.append(cell)
     board["Grid"] = cleaned_grid
 
+    # Ensure dynamicBomb, DynamicIce, MinFairy and MinCoin are always present (default to 0 if missing)
+    if "MinFairy" not in board:
+        board["MinFairy"] = 0
+    if "MinCoin" not in board:
+        board["MinCoin"] = 0
+    if "DynamicBombPercents" not in board:
+        board["DynamicBombPercents"] = 0
+    if "DynamicIcePercents" not in board:
+        board["DynamicIcePercents"] = 0
+
     # Drop zero-value board-level defaults
     for key in list(DEFAULT_ZERO_FIELDS_BOARD.keys()):
         if board.get(key) == DEFAULT_ZERO_FIELDS_BOARD[key]:
