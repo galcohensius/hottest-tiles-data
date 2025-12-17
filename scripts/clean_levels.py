@@ -17,8 +17,8 @@ DEFAULT_FLAGS = {
     "Empty": False,
 }
 DEFAULT_ZERO_FIELDS_STACK = {"Igloo": 0}
-# Board-level zero-value fields to drop
-DEFAULT_ZERO_FIELDS_BOARD = {"MinFairy": 0, "MinCoin": 0}
+# Board-level zero-value fields to drop (none - keep MinFairy and MinCoin even if 0)
+DEFAULT_ZERO_FIELDS_BOARD = {}
 
 
 def compact_stack(stack: dict) -> dict:
@@ -42,9 +42,14 @@ def process_level(path: Path) -> bool:
     board = level.get("Board", {})
 
     grid = board.get("Grid", [])
+    cleaned_grid = []
     for cell in grid:
         stacks = cell.get("Stacks", [])
         cell["Stacks"] = [compact_stack(stack) for stack in stacks]
+        # Only keep cells with non-empty stacks
+        if cell["Stacks"]:
+            cleaned_grid.append(cell)
+    board["Grid"] = cleaned_grid
 
     # Drop zero-value board-level defaults
     for key in list(DEFAULT_ZERO_FIELDS_BOARD.keys()):
