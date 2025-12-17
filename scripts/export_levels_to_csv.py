@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-LEVELS_DIR = REPO_ROOT / "data" / "levels"
+LEVELS_DIR = REPO_ROOT / "levels"
 OUTPUT_CSV = REPO_ROOT / "levels_export.csv"
 
 # Fixed grid dimensions
@@ -13,7 +13,7 @@ GRID_COLS = 12
 
 def load_levels():
     levels = []
-    for path in sorted(LEVELS_DIR.glob("Level_*.json")):
+    for path in sorted(LEVELS_DIR.glob("Level_*.json"), key=lambda p: int(p.stem.split("_")[1])):
         data = json.loads(path.read_text())
         level = data.get("Level", {})
         board = level.get("Board", {})
@@ -24,6 +24,8 @@ def load_levels():
         total_moves = board.get("TotalMoves")
         min_fairy = board.get("MinFairy", 0)
         min_coin = board.get("MinCoin", 0)
+        dynamic_bomb_percents = board.get("DynamicBombPercents")
+        dynamic_ice_percents = board.get("DynamicIcePercents")
 
         # Probabilities and arrays
         tiles_prob = board.get("TilesProbability", [])
@@ -63,6 +65,8 @@ def load_levels():
                 "total_moves": total_moves,
                 "MinFairy": min_fairy,
                 "MinCoin": min_coin,
+                "DynamicBombPercents": dynamic_bomb_percents,
+                "DynamicIcePercents": dynamic_ice_percents,
                 "TilesProbability": tiles_prob,
                 "MultiStack": multi_stack,
                 "ColorsProbability": colors_prob,
@@ -81,6 +85,8 @@ def write_csv(levels):
         "total_moves",
         "MinFairy",
         "MinCoin",
+        "DynamicBombPercents",
+        "DynamicIcePercents",
         "TilesProbability",
         "MultiStack",
         "ColorsProbability",
@@ -98,6 +104,8 @@ def write_csv(levels):
                 "total_moves": level["total_moves"],
                 "MinFairy": level["MinFairy"],
                 "MinCoin": level["MinCoin"],
+                "DynamicBombPercents": level["DynamicBombPercents"],
+                "DynamicIcePercents": level["DynamicIcePercents"],
                 "TilesProbability": json.dumps(level["TilesProbability"], separators=(",", ":")),
                 "MultiStack": json.dumps(level["MultiStack"], separators=(",", ":")),
                 "ColorsProbability": json.dumps(level["ColorsProbability"], separators=(",", ":")),
