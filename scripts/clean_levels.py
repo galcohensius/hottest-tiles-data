@@ -42,6 +42,21 @@ def process_level(path: Path) -> bool:
     board = level.get("Board", {})
 
     grid = board.get("Grid", [])
+    
+    # Calculate grid size from actual positions
+    max_row = 0
+    max_col = 0
+    for cell in grid:
+        pos = cell.get("GridPosition", [])
+        if len(pos) == 2:
+            r, c = pos
+            max_row = max(max_row, r)
+            max_col = max(max_col, c)
+    
+    # Build new board dict with grid size before Grid (to preserve order)
+    grid_rows = max_row
+    grid_cols = max_col
+    
     cleaned_grid = []
     for cell in grid:
         stacks = cell.get("Stacks", [])
@@ -49,7 +64,19 @@ def process_level(path: Path) -> bool:
         # Only keep cells with non-empty stacks
         if cell["Stacks"]:
             cleaned_grid.append(cell)
-    board["Grid"] = cleaned_grid
+    
+    # Rebuild board with proper field order: GridRows, GridCols, then Grid
+    new_board = {
+        "GridRows": grid_rows,
+        "GridCols": grid_cols,
+        "Grid": cleaned_grid,
+    }
+    # Add other fields in their original order
+    for key, value in board.items():
+        if key not in ("Grid", "GridRows", "GridCols"):
+            new_board[key] = value
+    board.clear()
+    board.update(new_board)
 
     # Ensure dynamicBomb, DynamicIce, MinFairy and MinCoin are always present (default to 0 if missing)
     if "MinFairy" not in board:

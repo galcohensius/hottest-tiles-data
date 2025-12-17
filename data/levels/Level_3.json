@@ -3,6 +3,8 @@
     "LevelNumber": 3,
     "LevelDifficulty": "Normal",
     "Board": {
+      "GridRows": 5,
+      "GridCols": 6,
       "Grid": [
         {
           "GridPosition": [

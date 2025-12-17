@@ -24,6 +24,8 @@ def load_levels():
         total_moves = board.get("TotalMoves")
         min_fairy = board.get("MinFairy", 0)
         min_coin = board.get("MinCoin", 0)
+        grid_rows = board.get("GridRows")
+        grid_cols = board.get("GridCols")
         dynamic_bomb_percents = board.get("DynamicBombPercents")
         dynamic_ice_percents = board.get("DynamicIcePercents")
 
@@ -45,6 +47,7 @@ def load_levels():
         level_target = board.get("LevelTarget", []) or []
 
         # Grid as map "r,c" -> stacks (list)
+        # Only include positions with non-empty stacks
         grid_map = {}
         grid = board.get("Grid", []) or []
         for cell in grid:
@@ -52,13 +55,10 @@ def load_levels():
             if len(pos) == 2:
                 r, c = pos
                 key = f"{r},{c}"
-                grid_map[key] = cell.get("Stacks", []) or []
-
-        # Normalize to fixed 10x12: fill missing as empty list
-        for r in range(1, GRID_ROWS + 1):
-            for c in range(1, GRID_COLS + 1):
-                key = f"{r},{c}"
-                grid_map.setdefault(key, [])
+                stacks = cell.get("Stacks", []) or []
+                # Only include positions with non-empty stacks
+                if stacks:
+                    grid_map[key] = stacks
 
         levels.append(
             {
@@ -67,6 +67,8 @@ def load_levels():
                 "total_moves": total_moves,
                 "MinFairy": min_fairy,
                 "MinCoin": min_coin,
+                "GridRows": grid_rows,
+                "GridCols": grid_cols,
                 "DynamicBombPercents": dynamic_bomb_percents,
                 "DynamicIcePercents": dynamic_ice_percents,
                 "TilesProbability": tiles_prob,
@@ -87,6 +89,8 @@ def write_csv(levels):
         "total_moves",
         "MinFairy",
         "MinCoin",
+        "GridRows",
+        "GridCols",
         "DynamicBombPercents",
         "DynamicIcePercents",
         "TilesProbability",
@@ -106,6 +110,8 @@ def write_csv(levels):
                 "total_moves": level["total_moves"],
                 "MinFairy": level["MinFairy"],
                 "MinCoin": level["MinCoin"],
+                "GridRows": level["GridRows"],
+                "GridCols": level["GridCols"],
                 "DynamicBombPercents": level["DynamicBombPercents"],
                 "DynamicIcePercents": level["DynamicIcePercents"],
                 "TilesProbability": json.dumps(level["TilesProbability"], separators=(",", ":")),

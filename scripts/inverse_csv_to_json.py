@@ -38,6 +38,8 @@ def parse_grid(grid_json):
 def row_to_level(row):
     level_number = int(row["LevelNumber"])
     board = {
+        "GridRows": int(row["GridRows"]) if row.get("GridRows") and row["GridRows"] != "" else 0,
+        "GridCols": int(row["GridCols"]) if row.get("GridCols") and row["GridCols"] != "" else 0,
         "Grid": parse_grid(row["Grid"]),
         "TilesProbability": json.loads(row["TilesProbability"]) if row["TilesProbability"] else [],
         "MultiStack": [int(row["MultiStack"])] if row.get("MultiStack") and row["MultiStack"] != "" else [],
@@ -102,6 +104,8 @@ def normalize_level(data):
             "LevelNumber": data["Level"]["LevelNumber"],
             "LevelDifficulty": data["Level"].get("LevelDifficulty"),
             "Board": {
+                "GridRows": board.get("GridRows", 0),
+                "GridCols": board.get("GridCols", 0),
                 "Grid": grid_sorted,
                 "TilesProbability": board.get("TilesProbability", []),
                 "MultiStack": board.get("MultiStack", []),
