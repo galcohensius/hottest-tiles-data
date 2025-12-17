@@ -29,7 +29,9 @@ def parse_grid(grid_json):
         for c in range(1, GRID_COLS + 1):
             key = f"{r},{c}"
             stacks = grid_map.get(key, [])
-            cells.append({"GridPosition": [r, c], "Stacks": stacks})
+            # Only include cells with non-empty stacks
+            if stacks:
+                cells.append({"GridPosition": [r, c], "Stacks": stacks})
     return cells
 
 
