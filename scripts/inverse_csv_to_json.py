@@ -3,9 +3,9 @@ import json
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
-LEVELS_DIR = REPO_ROOT / "levels"
-OUTPUT_DIR = REPO_ROOT / "levels_from_csv"
-INPUT_CSV = REPO_ROOT / "levels_export.csv"
+LEVELS_DIR = REPO_ROOT / "data" / "levels"
+OUTPUT_DIR = REPO_ROOT / "data" / "levels_from_csv"
+INPUT_CSV = REPO_ROOT / "data" / "levels_export.csv"
 
 GRID_ROWS = 10
 GRID_COLS = 12
