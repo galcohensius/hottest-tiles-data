@@ -278,21 +278,27 @@ def extract_target_features(target_json: str) -> Dict[str, float]:
 
 
 def extract_tiles_prob_features(tiles_prob_json: str) -> Dict[str, float]:
-    """Extract features from TilesProbability JSON array."""
+    """
+    Extract features from TilesProbability JSON array.
+    
+    Note: TilesProbability represents Stack Size Probabilities, not tile probabilities.
+    The array contains probabilities for stack sizes 3, 4, 5, 6 (exactly 4 values).
+    For example, [25,25,25,25] means 25% chance of stack size 3, 25% for size 4, 25% for size 5, 25% for size 6.
+    """
     tiles_prob = parse_json_column(tiles_prob_json)
     if not tiles_prob or not isinstance(tiles_prob, list):
         return {
-            "tiles_prob_count": 0,
-            "tiles_prob_mean": 0,
-            "tiles_prob_std": 0,
+            "tiles_prob_count": 0,  # Number of stack size probability bins (for sizes 3, 4, 5, 6)
+            "tiles_prob_mean": 0,   # Mean stack size probability
+            "tiles_prob_std": 0,    # Std of stack size probabilities
         }
     
     probs = [p for p in tiles_prob if isinstance(p, (int, float))]
     
     return {
-        "tiles_prob_count": len(probs),
-        "tiles_prob_mean": np.mean(probs) if probs else 0,
-        "tiles_prob_std": np.std(probs) if probs else 0,
+        "tiles_prob_count": len(probs),  # Number of stack size probability bins (for sizes 3, 4, 5, 6)
+        "tiles_prob_mean": np.mean(probs) if probs else 0,  # Mean stack size probability
+        "tiles_prob_std": np.std(probs) if probs else 0,   # Std of stack size probabilities
     }
 
 
@@ -305,10 +311,9 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
     features = pd.DataFrame()
     
     # Basic numeric features (level design only)
+    # Option 1: Keep grid_area and GridCols, remove GridRows to avoid multicollinearity
     design_cols = [
-        "Level",
-        "GridRows",
-        "GridCols",
+        "GridCols",  # Keep GridCols for aspect ratio
         "total_moves",
         "MinFairy",
         "MinCoin",
@@ -317,14 +322,30 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
         "MultiStack",
     ]
     
+    # Get GridRows for calculations (but don't add as feature)
+    grid_rows = None
+    if "GridRows" in df.columns:
+        grid_rows = pd.to_numeric(df["GridRows"], errors="coerce").fillna(0)
+    
+    # Add design columns
     for col in design_cols:
         if col in df.columns:
             features[col] = pd.to_numeric(df[col], errors="coerce").fillna(0)
     
-    # Derived features
-    if "GridRows" in features.columns and "GridCols" in features.columns:
-        features["grid_area"] = features["GridRows"] * features["GridCols"]
-        features["grid_aspect_ratio"] = features["GridCols"] / (features["GridRows"] + 1e-10)
+    # Derived features from GridRows and GridCols
+    # Use grid_area (GridRows * GridCols) instead of GridRows to avoid multicollinearity
+    if grid_rows is not None and "GridCols" in features.columns:
+        # Grid area (total cells) - more informative than GridRows alone
+        features["grid_area"] = grid_rows * features["GridCols"]
+        # Aspect ratio (width/height)
+        features["grid_aspect_ratio"] = features["GridCols"] / (grid_rows + 1e-10)
+    elif "GridCols" in features.columns:
+        # Fallback if only GridCols available
+        features["grid_area"] = features["GridCols"] * 10  # Default assumption
+        features["grid_aspect_ratio"] = 1.0
+    else:
+        features["grid_area"] = 0
+        features["grid_aspect_ratio"] = 1.0
     
     if "total_moves" in features.columns:
         features["moves_per_cell"] = features["total_moves"] / (features.get("grid_area", 1) + 1e-10)
@@ -346,6 +367,7 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
         features = pd.concat([features, target_df], axis=1)
     
     if "TilesProbability" in df.columns:
+        # Note: TilesProbability represents Stack Size Probabilities (for stack sizes 3, 4, 5, 6)
         tiles_features = df["TilesProbability"].apply(extract_tiles_prob_features)
         tiles_df = pd.DataFrame(tiles_features.tolist())
         features = pd.concat([features, tiles_df], axis=1)
@@ -376,14 +398,12 @@ def engineer_features(df: pd.DataFrame) -> pd.DataFrame:
     if "grid_color_diversity" in features.columns and "num_colors" in features.columns:
         features["color_usage_ratio"] = features["grid_color_diversity"] / (features["num_colors"] + 1e-10)
     
-    if "GridRows" in features.columns and "GridCols" in features.columns:
-        # Already have grid_area, but add normalized version
-        features["grid_size_normalized"] = (features["GridRows"] + features["GridCols"]) / 2
+    if "grid_area" in features.columns and "GridCols" in features.columns:
+        # Normalized grid size (using grid_area and GridCols)
+        features["grid_size_normalized"] = (np.sqrt(features["grid_area"]) + features["GridCols"]) / 2
     
     # Add polynomial features for top correlated features
-    if "Level" in features.columns:
-        features["Level_squared"] = features["Level"] ** 2
-        features["Level_sqrt"] = np.sqrt(features["Level"])
+    # Note: Level and Level_sqrt removed as they're not level design features
     
     if "num_colors" in features.columns:
         features["num_colors_squared"] = features["num_colors"] ** 2

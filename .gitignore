@@ -30,3 +30,6 @@ Thumbs.db
 *.tmp
 *.log
 backup/
+
+# ML Models (generated artifacts)
+models/

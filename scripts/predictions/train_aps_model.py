@@ -414,8 +414,8 @@ def main():
             'importance': importances
         }).sort_values('importance', ascending=False)
         
-        print(f"\n   Top 15 Features by Importance:")
-        for i, row in importance_df.head(15).iterrows():
+        print(f"\n   All Features by Importance:")
+        for i, row in importance_df.iterrows():
             print(f"   {row['feature']:30s} {row['importance']:8.4f}")
     
     elif hasattr(model, 'coef_'):
@@ -432,10 +432,23 @@ def main():
             'abs_coefficient': np.abs(model.coef_)
         }).sort_values('abs_coefficient', ascending=False)
         
-        print(f"\n   Top 15 Features by Absolute Coefficient:")
-        for i, row in coef_df.head(15).iterrows():
+        # Separate non-zero and zero coefficients
+        threshold = 1e-6
+        non_zero = coef_df[coef_df['abs_coefficient'] > threshold]
+        zero_coefs = coef_df[coef_df['abs_coefficient'] <= threshold]
+        
+        print(f"\n   All Features by Absolute Coefficient:")
+        for idx, (i, row) in enumerate(non_zero.iterrows(), 1):
             sign = "+" if row['coefficient'] >= 0 else "-"
-            print(f"   {sign} {row['feature']:30s} {row['coefficient']:8.4f}")
+            print(f"   {idx:2d}. {sign} {row['feature']:30s} {row['coefficient']:8.4f}")
+        
+        if len(zero_coefs) > 0:
+            print(f"\n   Zero-weight features ({len(zero_coefs)}):")
+            zero_features = zero_coefs['feature'].tolist()
+            # Print in a more readable format
+            for i in range(0, len(zero_features), 5):
+                chunk = zero_features[i:i+5]
+                print(f"   {', '.join(chunk)}")
     
     # Summary
     print(f"\n" + "=" * 80)
