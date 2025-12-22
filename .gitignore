@@ -23,9 +23,8 @@ Thumbs.db
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Data files (if you want to exclude large files, uncomment)
-# *.csv
-# *.xlsx
+# Data files
+*.xlsx
 
 # Temporary files
 *.tmp
